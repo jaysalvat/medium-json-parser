@@ -1,7 +1,7 @@
 # Medium Json Parser
 
-[![Latest Stable Version](https://poser.pugx.org/jaysalvat/medium-json-parser/v/stable.svg)](https://packagist.org/packages/jaysalvat/image2css)
-[![License](https://poser.pugx.org/jaysalvat/image2css/license.svg)](https://packagist.org/packages/jaysalvat/medium-json-parser)
+[![Latest Stable Version](https://poser.pugx.org/jaysalvat/medium-json-parser/v/stable.svg)](https://packagist.org/packages/jaysalvat/medium-json-parser)
+[![License](https://poser.pugx.org/jaysalvat/medium-json-parser/license.svg)](https://packagist.org/packages/jaysalvat/medium-json-parser)
 
 This is a PHP parser for the Medium Json API.
 
