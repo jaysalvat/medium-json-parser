@@ -1,3 +1,6 @@
-dev
 .sass-cache
-sass
+
+dev
+vendor
+
+/sass

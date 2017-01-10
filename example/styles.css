@@ -20,11 +20,10 @@ body {
   margin-top: 30px;
   margin-bottom: 30px; }
 .medium-container h1, .medium-container h2, .medium-container h3, .medium-container h4 {
-  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-style: normal;
-  margin-left: -2.5px;
-  line-height: 1.04;
+  line-height: 1.2;
   letter-spacing: -0.028em;
   margin: 0 auto 15px;
   color: black; }
@@ -34,8 +33,9 @@ body {
 .medium-container h2 {
   font-size: 27px;
   color: gray;
-  font-weight: normal;
-  margin-bottom: 30px; }
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: 0; }
 .medium-container h3 {
   font-size: 32px; }
 .medium-container h4 {
@@ -51,7 +51,7 @@ body {
   color: rgba(0, 0, 0, 0.6); }
 .medium-container blockquote {
   font-style: italic;
-  border-left: 3px solid rgba(0, 0, 0, 0.6);
+  border-left: 3px solid #ccc;
   padding-left: 20px; }
 .medium-container figure {
   display: block;
@@ -93,7 +93,7 @@ body {
   .medium-layout-left figure {
     width: 560px;
     float: left;
-    margin: 5px 30px 10px -200px; }
+    margin: 8px 30px 10px -200px; }
 
 .medium-layout-larger figure {
   width: 900px; }
@@ -110,6 +110,6 @@ body {
   letter-spacing: -0.03em;
   line-height: 0.83;
   margin-bottom: -0.08em;
-  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 /*# sourceMappingURL=styles.css.map */

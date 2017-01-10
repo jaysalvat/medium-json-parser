@@ -1,7 +1,7 @@
 <?php
     ini_set('display_errors', true);
 
-    include '../src/MediumJsonParser/Parser.php';
+    include '../vendor/autoload.php';
 
     $url = 'https://medium.com/@jaysalvat/my-title-99dcb55001b6';
 
