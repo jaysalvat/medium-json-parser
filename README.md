@@ -43,6 +43,8 @@ $html = $parser->html([
     // HTML or Array of HTML
     'return_array' => false
 ]);
+
+echo $html;
 ```
 
 ## iFrame Proxy
