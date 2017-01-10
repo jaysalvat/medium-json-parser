@@ -1,0 +1,27 @@
+{
+    "name": "jaysalvat/medium-json-parser",
+    "description": "Parser Medium JSON form API to get data and HTML.",
+    "version": "0.1.0",
+    "license": "MIT",
+    "homepage": "https://github.com/jaysalvat/medium-json-parser",
+    "keywords": [
+        "medium",
+        "api",
+        "json"
+        "parser"
+    ],
+    "authors": [
+        {
+            "name": "Jay Salvat",
+            "email": "jay@jaysalvat.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "MediumJsonParser": "src/"
+        }
+    }
+}
