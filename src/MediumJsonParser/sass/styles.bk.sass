@@ -1,9 +1,6 @@
 $medium-body-width: 700px
-$medium-body-offset: 100px
 $medium-block-margin: 30px
-
-$medium-breakpoint-small: $medium-body-width
-$medium-breakpoint-medium: $medium-body-width + ($medium-body-offset * 2)
+$medium-breakpoint: 400px
 
 $medium-font-title: "Helvetica Neue", Helvetica, Arial, sans-serif
 $medium-font-text: Georgia, Cambria, "Times New Roman", Times, serif
@@ -12,31 +9,30 @@ $medium-font-code: Menlo, Monaco, "Courier New", Courier, monospace
 $medium-color-title: black 
 $medium-color-text: rgba(black, .6)
 
-html, body
-    width: 100%
-    height: 100%
+body
     padding: 0
     margin: 0
+    box-sizing: border-box
 
 .medium-container
-    *
-        padding: 0
-        margin: 0
-        box-sizing: border-box
-
     h1, h2, h3, h4, pre, p,
     ul, ol,
     figure,
     blockquote
-        width: 100%
-        padding-right: 20px
-        padding-left: 20px
-        margin-bottom: $medium-block-margin
+        width: $medium-body-width
+        margin: 0 auto $medium-block-margin
 
-        @media (min-width: $medium-breakpoint-small + 1)
-            width: $medium-body-width
-            margin: 0 auto $medium-block-margin
-            padding: 0
+    a
+        color: inherit
+
+    pre
+        font-family: $medium-font-code
+        font-size: 16px
+        background: rgba(black, .05)
+        padding: 20px
+        white-space: pre-wrap
+        margin-top: $medium-block-margin
+        margin-bottom: $medium-block-margin
 
     h1, h2, h3, h4
         font-family: $medium-font-title
@@ -67,9 +63,6 @@ html, body
     img
         width: 100%
 
-    a
-        color: inherit
-
     ul, ol, p, blockquote
         font-weight: 400
         font-style: normal
@@ -80,21 +73,13 @@ html, body
 
     blockquote
         font-style: italic
-        border-left: 10px solid #ccc
+        border-left: 3px solid #ccc
         padding-left: 20px
 
-    li
-        margin-left: 20px
-
-    pre
-        font-family: $medium-font-code
-        font-size: 16px
-        background: rgba(black, .05)
-        padding: 20px
-        white-space: pre-wrap
-
     figure
+        display: block
         position: relative
+        width: 100%
 
     figcaption
         font-size: 14px
@@ -119,6 +104,31 @@ html, body
         width: 100%
         height: 100%
 
+.medium-layout-centered
+    figure
+        width: $medium-body-width
+
+.medium-layout-fullwidth 
+    figure
+        width: 100%
+
+    .medium-ratio
+        max-width: 100% !important
+        max-height: 100% !important
+
+.medium-layout-left
+    max-width: 500px
+    margin: 0 auto
+
+    figure
+        width: $medium-body-width / 1.25
+        float:  left
+        margin: 8px 30px 8px -200px
+
+.medium-layout-larger 
+    figure
+        width: $medium-body-width + ($medium-body-width / 2.5)
+
 .medium-dropcap:first-letter
     float: left
     color: black
@@ -132,45 +142,4 @@ html, body
     line-height: .83
     margin-bottom: -.08em
     font-family: $medium-font-title
-
-.medium-layout-larger,
-.medium-layout-fullwidth
-    figure
-        padding: 0
-        width: 100%
-
-@media (min-width: $medium-breakpoint-small + 1)
-    .medium-layout-fullwidth 
-        figure
-            width: 100%
-
-        .medium-ratio
-            max-width: 100% !important
-            max-height: 100% !important
-
-    .medium-layout-left
-        margin: 0 auto
-
-        @media (min-width: $medium-breakpoint-small + 1)
-            max-width: $medium-body-width
-
-        figure
-            float:  left
-
-            @media (min-width: $medium-breakpoint-small + 1)
-                width: $medium-body-width / 1.75
-                margin: 4px 30px 8px ($medium-body-offset / 2 * -1)
-
-            @media (min-width: $medium-breakpoint-medium + 1)
-                width: $medium-body-width / 1.25
-                margin: 4px 30px 8px ($medium-body-offset * -1)
-
-    .medium-layout-larger 
-        figure
-            width: 100%
-
-        @media (min-width: $medium-breakpoint-medium + 1)
-            figure
-                width: $medium-body-width + ($medium-body-offset * 2)
-
 
