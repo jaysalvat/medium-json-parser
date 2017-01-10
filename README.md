@@ -22,30 +22,33 @@ Run [Composer](https://getcomposer.org/) to install MediumJsonParser.
 
 ## Example:
 
-    $url = 'https://medium.com/@jaysalvat/my-title-99dcb55001b6';
+```php
+$url = 'https://medium.com/@jaysalvat/my-title-99dcb55001b6';
 
-    $parser = new MediumJsonParser\Parser($url);
+$parser = new MediumJsonParser\Parser($url);
 
-    // Path to the iFrame proxy, see below
-    $parser->iframeProxyPath = 'iframe.php';
+// Path to the iFrame proxy, see below
+$parser->iframeProxyPath = 'iframe.php';
 
-    // Image compression
-    $parser->imageQuality = 80;
+// Image compression
+$parser->imageQuality = 80;
 
-    // Image max size
-    $parser->imageWidth = 2000;
+// Image max size
+$parser->imageWidth = 2000;
 
-    $html = $parser->html([
-        // Skip/keep the title and subtitle
-        'skip_header'  => false,
+$html = $parser->html([
+    // Skip/keep the title and subtitle
+    'skip_header'  => false,
 
-        // HTML or Array of HTML
-        'return_array' => false
-    ]);
+    // HTML or Array of HTML
+    'return_array' => false
+]);
+```
 
 ## iFrame Proxy
 
 To avoid CORS issues with iFrame, create a iframe.php proxy.
 
-    readfile('http://medium.com/media/' . $_GET['resource_id'] . '?postId=' . $_GET['post_id']d. '"');
-    
+```php
+readfile('http://medium.com/media/' . $_GET['resource_id'] . '?postId=' . $_GET['post_id'] . '"');
+```
