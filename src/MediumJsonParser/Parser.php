@@ -28,7 +28,7 @@ class Parser
     public $imageQuality = 40;
     public $imageWidth = 1280;
 
-    protected $special_chars = [
+    public $special_chars = [
         "’" => "'",
         "“" => '"',
         "”" => '"',
