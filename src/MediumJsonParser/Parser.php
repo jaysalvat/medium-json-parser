@@ -49,7 +49,6 @@ class Parser
         $this->id = $values->id;
         $this->title = $values->title;
         $this->subtitle = $values->content->subtitle;
-        $this->date = $values->content->subtitle;
         $this->language = $values->detectedLanguage;
         $this->url = $values->mediumUrl;
         $this->last_version = $values->latestVersion;
@@ -194,7 +193,6 @@ class Parser
     private function parseMediaFrame($json)
     {
         $class = $this->getLayoutClass($json);
-
         $post_id = $this->id;
         $resource_id = $json->iframe->mediaResourceId;
         $caption = $json->text;
