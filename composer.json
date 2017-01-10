@@ -1,7 +1,7 @@
 {
     "name": "jaysalvat/medium-json-parser",
-    "description": "Parser Medium JSON form API to get data and HTML.",
-    "version": "0.1.0",
+    "description": "Php parser for the Medium JSON API.",
+    "version": "0.1.1",
     "license": "MIT",
     "homepage": "https://github.com/jaysalvat/medium-json-parser",
     "keywords": [
