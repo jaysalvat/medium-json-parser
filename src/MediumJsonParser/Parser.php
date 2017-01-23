@@ -136,6 +136,18 @@ class Parser
         return $this->last_published_version;
     }
 
+    public function getImageUrl($id, $width = null, $height = null, $quality = null) 
+    {
+        $quality = $quality ?: $this->imageQuality;
+        $width = $width ?: $this->imageWidth;
+
+        if ($height) {
+            return 'https://cdn-images-1.medium.com/fit/' . $width . '/' . $height . '/' . $id . '?q=' . $this->imageQuality;
+        }
+
+        return 'https://cdn-images-1.medium.com/max/' . $width . '/' . $id . '?q=' . $this->imageQuality;
+    }
+
     public function html($options = []) 
     {
         $options = array_merge([
@@ -267,7 +279,7 @@ class Parser
         $image .= '<figure>';
         $image .= '<div class="medium-ratio" style="max-width:' . $width . 'px;max-height:' . $height . 'px;">';
         $image .= '<div class="medium-ratio-inner" style="padding-bottom:' . $ratio . '%;"></div>';
-        $image .= '<img src="https://cdn-images-1.medium.com/max/' . $this->imageWidth . '/' . $id . '?q=' . $this->imageQuality . '"/>';
+        $image .= '<img src="' . $this->getImageUrl($id, $this->imageWidth) . '" />';
         $image .= '</div>';
         $image .= ($caption) ? '<figcaption>' . $caption . '</figcaption>' : '';
         $image .= '</figure>';
