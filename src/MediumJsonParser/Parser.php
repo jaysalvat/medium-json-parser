@@ -16,6 +16,7 @@ class Parser
     protected $language;
     protected $last_version;
     protected $last_published_version;
+    protected $data;
     protected $url;
     protected $author;
     protected $created_at;
@@ -46,6 +47,7 @@ class Parser
         $values = $json->value;
         $references = $json->references;
 
+        $this->data = $json;
         $this->id = $values->id;
         $this->title = $values->title;
         $this->subtitle = $values->content->subtitle;
@@ -60,6 +62,11 @@ class Parser
         $this->author = $references->User->{$author_id}->name;
 
         $this->content = $values->content->bodyModel->paragraphs;
+    }
+
+    public function getData()
+    {
+        return $this->data;
     }
 
     public function getId()
