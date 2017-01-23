@@ -96,16 +96,6 @@ class Parser
         return $this->id;
     }
 
-    public function getVersion()
-    {
-        return $this->last_published_version;
-    }
-
-    public function getLastVersion()
-    {
-        return $this->last_version;
-    }
-
     public function getTitle()
     {
         return $this->title;
