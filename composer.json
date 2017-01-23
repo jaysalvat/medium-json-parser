@@ -4,6 +4,9 @@
     "version": "1.0.0",
     "license": "MIT",
     "homepage": "https://github.com/jaysalvat/medium-json-parser",
+    "repository": {
+        "url": "https://github.com/jaysalvat/medium-json-parser"
+    },
     "keywords": [
         "medium",
         "api",
