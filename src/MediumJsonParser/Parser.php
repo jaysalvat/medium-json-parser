@@ -52,7 +52,7 @@ class Parser
         $this->title = $values->title;
         $this->subtitle = $values->content->subtitle;
         $this->language = $values->detectedLanguage;
-        $this->url = $values->mediumUrl;
+        $this->url = $values->canonicalUrl;
         $this->last_version = $values->latestVersion;
         $this->last_published_version = $values->latestPublishedVersion;
         $this->created_at = $values->createdAt;
