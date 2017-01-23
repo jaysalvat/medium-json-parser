@@ -21,6 +21,9 @@ class Parser
     protected $author;
     protected $created_at;
     protected $updated_at;
+    protected $preview_id;
+    protected $preview_width;
+    protected $preview_height;
 
     protected $previousType;
     protected $content;
@@ -58,6 +61,10 @@ class Parser
         $this->created_at = $values->createdAt;
         $this->updated_at = $values->updatedAt;
 
+        $this->preview_id = $values->virtuals->previewImage->imageId;
+        $this->preview_width = $values->virtuals->previewImage->originalWidth;
+        $this->preview_height = $values->virtuals->previewImage->originalHeight;
+
         $author_id = $values->creatorId;
         $this->author = $references->User->{$author_id}->name;
 
@@ -67,6 +74,21 @@ class Parser
     public function getData()
     {
         return $this->data;
+    }
+
+    public function getPreviewId()
+    {
+        return $this->preview_id;
+    }
+
+    public function getPreviewWidth()
+    {
+        return $this->preview_width;
+    }
+
+    public function getPreviewHeight()
+    {
+        return $this->preview_height;
     }
 
     public function getId()

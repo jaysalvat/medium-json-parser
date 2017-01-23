@@ -10,6 +10,8 @@
     $parser->imageQuality = 80;
     $parser->imageWidth = 2000;
 
+    die('-' . $parser->getVersion() . '-');
+
     $html = $parser->html([
         'skip_header'  => false,
         'return_array' => false
