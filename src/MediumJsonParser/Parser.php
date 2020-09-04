@@ -194,7 +194,7 @@ class Parser
 
                 // Image
                 case 4: 
-                    $part = $this->parseImage($element, $options['skip_header']);
+                    $part = $this->parseImage($element);
                 break;
 
                 // Blockquote
@@ -220,7 +220,7 @@ class Parser
 
                 // SubTitle
                 case 13: 
-                    $part = $this->parseSubTitle($element);
+                    $part = $this->parseSubTitle($element, $options['skip_header']);
                 break;
             }
 
